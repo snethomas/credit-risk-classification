@@ -4,9 +4,11 @@
 
 Banks and other lenders use financial information of the borrower and of the loan itself, to predict if there is a risk of payment defaults.
 
-* The objective here is to predict the health of a loan ie. high risk of deafulting vs healthy, based on factors like loan_size	,interest_rate	,borrower_income	,debt_to_income	,num_of_accounts	,derogatory_marks	and total_debt	
-* This analyses provides 77K loan records that include these details for each loan and the corresponding loan status - ie healthy vs. high risk.
-* The 77,536 loan records are flagged as 'healthy' vs 'high-risk' ie. 75,036 and 2,500 records each, respectively. 
+The objective here is to predict the health of a loan ie. high risk of deafulting vs healthy, based on factors like loan_size	,interest_rate	,borrower_income	,debt_to_income	,num_of_accounts	,derogatory_marks	and total_debt	
+
+This analyses provides 77K loan records that include these details for each loan and the corresponding loan status - ie healthy vs. high risk.
+
+The 77,536 loan records are flagged as 'healthy' vs 'high-risk' ie. 75,036 and 2,500 records each, respectively. 
 
  * 1- The first step of this supervised machine learning analyses is to divide the dataset into a 'train' [58,152=56,271(0)+1,881(1)] and 'test' dataset of [19,384=18,765(0)+619(1)] records
  * 2- Since the prediction is boolean ie. 1 or 0 - we used a Logistic Regression model.
@@ -39,13 +41,13 @@ This model is very close in accuracy to the original model but it is able to cla
 
 ## Summary
 
-* Which one seems to perform best? How do you know it performs best?
+Which one seems to perform best? How do you know it performs best?
 
  * 1- Model 2 performs better than Model 1 even though the accuracy is similar at 99%. 
  * 2-This is clear from the balanced accuracy score which is higher at 99% for Model 2. 
  * 3-The recall rate for 1 or high-risk predictions increased from 91% to 99%, which is significant. This means that 99% of high-risk loans are predicted correctly in Model 2.
 
-* Does performance depend on the problem we are trying to solve? (For example, is it more important to predict the `1`'s, or predict the `0`'s? )
+Does performance depend on the problem we are trying to solve? (For example, is it more important to predict the `1`'s, or predict the `0`'s? )
 
  * 1- In this analyses it is more important to predict the high-risk loans accurately. 
  * 2- Even if precision is low at 84% - which can lead to false positives/high-risk status prediction
